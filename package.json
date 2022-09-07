@@ -1,0 +1,19 @@
+{
+  "name": "tailwind-html",
+  "version": "1.0.0",
+  "description": "A Responsive website with html and tailwind with javascript",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-tw": "npx tailwindcss -i ./src/styles.css -o ./public/main.css --watch",
+    "serve": "live-server public"
+  },
+  "author": "alaska",
+  "license": "ISC",
+  "dependencies": {
+    "tailwind": "^4.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8"
+  }
+}

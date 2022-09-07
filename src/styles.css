@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Rambla;
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply bg-white w-full py-4 md:py-6 px-4 sm:px-3 md:px-4 lg:px-12 flex justify-between items-center drop-shadow-xl relative z-50;
+  }
+
+  .toggle-btn {
+    @apply bg-gray-300 p-2 rounded-none block md:hidden lg:hidden xl:hidden;
+  }
+
+  .navbar-navs {
+    @apply flex-col justify-start md:justify-end md:flex-row lg:flex-row xl:flex-row px-3 space-x-0 md:space-x-1 lg:space-x-2 absolute z-[99999] md:static top-[73px] left-0 w-full bg-white p-3 md:p-0 drop-shadow-2xl md:drop-shadow-none;
+  }
+
+  .navbar-navs .nav-item.active {
+    background-color: theme(colors.red.600);
+    color: theme(colors.white);
+  }
+
+  .navbar-navs .nav-item {
+    @apply px-2 md:px-4 lg:px-6 py-2 bg-white hover:bg-red-600 hover:text-white cursor-pointer;
+  }
+
+  .navbar-navs .dropdown {
+    @apply flex border border-gray-300 px-2 sm:px-3 md:px-3 lg:px-6 py-2;
+  }
+
+  .navbar-navs .dropdown .dropdown-menu {
+    @apply absolute z-50 top-[52px] left-0 md:left-[-3px] min-w-full md:min-w-[150px] bg-white p-2 drop-shadow-2xl border border-gray-200;
+  }
+
+  .navbar-navs .dropdown .dropdown-menu li {
+    @apply px-3 py-2 hover:bg-gray-200 cursor-pointer;
+  }
+
+  /* .slideshow-container * {
+    box-sizing: border-box;
+  } */
+
+  .slideshow-container {
+    width: inherit;
+    position: relative;
+  }
+
+  /* Hide the images by default */
+  .slideshow-container .mySlides {
+    display: none;
+    width: 100%;
+    height: inherit;
+    position: relative;
+  }
+
+  .slideshow-container .mySlides::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: theme(colors.slate.900);
+    z-index: 1;
+    opacity: 0.4;
+  }
+
+  .slideshow-container .mySlides img {
+    height: inherit;
+  }
+
+  /* Next & previous buttons */
+  .slideshow-container .prev,
+  .slideshow-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 5;
+  }
+
+  /* Position the "next button" to the right */
+  .slideshow-container .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .slideshow-container .prev:hover,
+  .slideshow-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Caption text */
+  .slideshow-container .slide-info {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+  }
+
+  .slideshow-container .slide-info .main-title {
+    @apply text-white font-extrabold text-2xl sm:text-xl md:text-6xl lg:text-7xl;
+  }
+
+  .slideshow-container .slide-info .sub-title {
+    @apply text-white tracking-[0.3rem] lg:tracking-[0.84rem] text-base sm:text-base md:text-xl lg:text-xl font-light mt-4 md:mt-8 lg:mt-[2rem];
+  }
+
+  /* Number text (1/3 etc) */
+  .slideshow-container .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .banner-section .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .banner-section .active,
+  .banner-section .dot:hover {
+    background: theme(colors.red.600);
+    border: 2px solid theme(colors.red.600);
+  }
+
+  /* Fading animation */
+  .banner-section .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .primaryBtn {
+    @apply bg-red-600 text-white px-3 py-2 text-sm md:text-base md:px-6 md:py-3 tracking-wider;
+  }
+
+  .outlineSecondary {
+    @apply bg-transparent text-white px-3 py-2 text-sm md:text-base md:px-6 md:py-3 border-2 border-white tracking-wider;
+  }
+
+  .service-item {
+    @apply flex flex-col items-center cursor-pointer;
+  }
+
+  #services-section .service-item .service-icon {
+    @apply flex items-center justify-center w-[80px] h-[80px] rounded-full border-2 border-white transition ease-linear duration-700;
+  }
+
+  .service-item p {
+    @apply mt-3 text-gray-400 tracking-widest w-[90%] mx-auto sm:w-[90%] md:w-[100%];
+  }
+
+  .service-item:hover .service-icon {
+    @apply bg-white;
+  }
+
+  .service-item:hover .service-icon svg {
+    @apply stroke-gray-900;
+  }
+
+  #projects-section .nav-tabs .nav-item {
+    @apply flex items-center justify-center;
+  }
+
+  #projects-section .nav-tabs .nav-item .nav-link {
+    @apply px-5 py-2 bg-gray-200 hover:bg-gray-300 text-center w-full;
+  }
+
+  #projects-section .nav-tabs .nav-item .nav-link.active {
+    @apply px-5 py-2 bg-red-600 text-white text-center;
+  }
+
+  #projects-section .tab-content .tab-pane {
+    @apply hidden animate-fade;
+  }
+
+  #projects-section .tab-content .tab-pane.show {
+    @apply block;
+  }
+
+  .project-card {
+    @apply bg-white rounded-md shadow-sm cursor-pointer hover:shadow-lg transition-shadow ease-in-out duration-700;
+  }
+
+  .project-card .card-body {
+    @apply p-4 border-t border-gray-300;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #footer-section .social-icons {
+    @apply mt-5;
+  }
+
+  #footer-section .social-icons .social-icon {
+    @apply w-7 h-7 flex items-center justify-center cursor-pointer;
+  }
+
+  #footer-section .social-icons .social-icon.facebook {
+    @apply bg-blue-700 hover:bg-blue-900;
+  }
+
+  #footer-section .social-icons .social-icon.twitter {
+    @apply bg-blue-500 hover:bg-blue-700;
+  }
+
+  #footer-section .social-icons .social-icon.instagram {
+    @apply bg-red-600 hover:bg-red-800;
+  }
+
+  #footer-section .social-icons .social-icon.linkedin {
+    @apply bg-sky-700 hover:bg-sky-900;
+  }
+
+  #footer-section .social-icons .social-icon i {
+    @apply text-white;
+  }
+
+  #footer-section .footer-links li {
+    @apply text-gray-500 px-3 py-1 hover:text-white;
+  }
+
+  #footer-section .footer-contact .contact-info {
+    @apply flex flex-col items-center text-center sm:text-center md:text-left sm:flex-col md:flex-row space-x-1 sm:space-x-1 md:space-x-3 mb-4 cursor-pointer;
+  }
+}

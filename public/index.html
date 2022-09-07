@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link href="./main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER SECTION-->
+    <header class="grid grid-cols-1 static md:relative w-full" id="header">
+      <nav class="navbar">
+        <div class="navbar-title">
+          <img
+            src="./images/extra-services.png"
+            class="w-[40%] md:w-[60%]"
+            alt=""
+          />
+        </div>
+        <button type="button" class="toggle-btn">
+          <svg
+            class="stroke-gray-500 w-[25px] toggle-btn-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+        <ul class="navbar-navs hidden md:flex">
+          <li class="active nav-item">Home</li>
+          <li class="nav-item">About</li>
+          <li class="nav-item">Portfolio</li>
+          <li class="nav-item">Contact</li>
+          <li class="dropdown relative">
+            <button
+              type="button"
+              class="dropdown-btn flex items-center justify-between border w-full md:w-max border-gray-50"
+            >
+              Request Action
+
+              <svg
+                class="ml-2 w-[16px]"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </button>
+            <ul class="dropdown-menu hidden flex-col">
+              <li>Menu 1</li>
+              <li>Menu 1</li>
+              <li>Menu 1</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- BANNER SECTION-->
+      <section class="banner-section w-full">
+        <!-- Slideshow container -->
+        <div
+          class="slideshow-container overflow-hidden h-[300px] sm:h-[300px] md:h-[500px] lg:h-[580px]"
+        >
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <img src="./images/starry-sky.jpg" width="100%" />
+            <div class="slide-info">
+              <h1 class="main-title drop-shadow-[0 1px 2px rgb(0 0 0 / 60%)]">
+                Best Business Thinking
+              </h1>
+              <h5 class="sub-title">You deserve the best</h5>
+
+              <div
+                class="flex justify-center mt-4 sm:mt-4 md:mt-7 lg:mt-[2rem] space-x-3"
+              >
+                <button type="button" class="primaryBtn">Read More</button>
+                <button type="button" class="outlineSecondary">
+                  Portfolio
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="./images/welcome-banner.jpg" width="100%" />
+            <div class="slide-info">
+              <h1 class="main-title drop-shadow-[0 1px 2px rgb(0 0 0 / 60%)]">
+                Build Effective Design
+              </h1>
+              <h5 class="sub-title">Solutions made easy</h5>
+
+              <div
+                class="flex justify-center mt-4 sm:mt-4 md:mt-7 lg:mt-[2rem] space-x-3"
+              >
+                <button type="button" class="primaryBtn">Read More</button>
+                <button type="button" class="outlineSecondary">
+                  Portfolio
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="./images/mojave-night.webp" width="100%" />
+            <div class="slide-info">
+              <h1 class="main-title drop-shadow-[0 1px 2px rgb(0 0 0 / 60%)]">
+                Become the Best Available
+              </h1>
+              <h5 class="sub-title">You deserve the best</h5>
+
+              <div class="flex justify-center mt-4 sm:mt-4 md:mt-7 lg:mt-[2rem] space-x-3">
+                <button type="button" class="primaryBtn">Read More</button>
+                <button type="button" class="outlineSecondary">
+                  Portfolio
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <div
+            class="text-center absolute z-[10] bottom-3 left-[50%] transform translate-x-[-40%]"
+          >
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </section>
+      <!-- BANNER SECTION-->
+    </header>
+    <!-- HEADER SECTION-->
+
+    <!-- ABOUT US SECTION-->
+    <section id="about-section" class="w-full sm:w-[90%] md:w-[90%] lg:w-[80%] mx-auto mt-10 md:mt-20">
+      <h1 class="text-center text-[2rem] sm:text-[2rem]  md:text-[2.8rem] font-extrabold">About Us</h1>
+
+      <div class="mt-7 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 px-7 md:px-0 lg:px-0">
+        <div class="text-center">
+          <img src="./images/ab.png" width="100%" alt="" />
+        </div>
+        <div class="text-center sm:text-center md:text-left lg:text-left"">
+          <h3 class="tracking-wider text-3xl text-center md:text-left lg:text-left">
+            Working to build a better web design
+          </h3>
+          <p class="leading-normal mt-4">
+            Pellentesque convallis diam consequat magna vulputate malesuada.
+            Cras a ornare elit. Nulla viverra pharetra sem, eget pulvinar neque
+            pharetra ac.
+          </p>
+
+          <p class="mt-4">
+            Lorem Ipsum convallis diam consequat magna vulputate malesuada. Cras
+            a ornare elit. Nulla viverra pharetra sem, eget pulvinar neque
+            pharetra ac.
+          </p>
+
+          <button class="primaryBtn mt-6 type="button">Read More</button>
+        </div>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 border-t-2 py-8 px-4 border-gray-200">
+        <div class="flex flex-row space-x-4 mb-4">
+          <span class="block">
+            <svg
+              class="w-10 stroke-3 stroke-red-600"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"
+              />
+            </svg>
+          </span>
+          <div>
+            <h5 class="font-bold">Digital Solutions</h5>
+            <p class="tracking-wider mt-3"">
+              Lorem Ipsum is simply text the printing and typesetting standard
+              industry.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-row space-x-4 mb-4">
+          <span class="block">
+            <svg
+              class="w-10 stroke-3 stroke-red-600"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
+              />
+            </svg>
+          </span>
+          <div>
+            <h5 class="font-bold">Live Website Builder</h5>
+            <p class="tracking-wider mt-3"">
+              Lorem Ipsum is simply text the printing and typesetting standard
+              industry.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-row space-x-4 mb-4">
+          <span class="block">
+            <svg
+              class="w-10 stroke-3 stroke-red-600"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
+              />
+            </svg>
+          </span>
+          <div>
+            <h5 class="font-bold">Creative Strategy</h5>
+            <p class="tracking-wider mt-3">
+              Lorem Ipsum is simply text the printing and typesetting standard
+              industry.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION-->
+    <section id="services-section" class="mt-5 bg-white">
+      <section class="what-we-do bg-gray-900 py-[100px]">
+        <div class="container w-full sm:w-[90%] md:w-[90%] lg:w-[80%] mx-auto">
+          <h2 class="font-bold text-4xl text-white text-center">What we do</h2>
+
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="service-item text-center">
+              <div class="service-icon">
+                <svg class="stroke-white w-[40px] transition ease duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>                
+              </div>
+
+              <h5 class="text-white tracking-widest mt-5">Unique Design</h5>
+
+              <p class="">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              </p>
+            </div>
+
+
+
+
+            <div class="service-item text-center">
+              <div class="service-icon">
+                <svg class="stroke-white w-[40px] transition ease duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+                </svg>
+                               
+              </div>
+
+              <h5 class="text-white tracking-widest mt-5">Different Layout</h5>
+
+              <p class="">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              </p>
+
+            </div>
+            <div class="service-item text-center">
+              <div class="service-icon">
+                <svg class="stroke-white w-[40px] transition ease duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                </svg>
+                             
+              </div>
+
+              <h5 class="text-white tracking-widest mt-5">Portfolio Styles</h5>
+
+              <p class="">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              </p>
+            </div>
+            <div class="service-item text-center">
+              <div class="service-icon">
+                <svg class="stroke-white w-[40px] transition ease duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
+                </svg>
+                            
+              </div>
+
+              <h5 class="text-white tracking-widest mt-5">User Experience</h5>
+
+              <p class="">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="w-full sm:w-[90%] md:w-[90%] lg:w-[80%] mx-auto py-[90px]">
+        <h1 class="text-center text-[2rem] sm:text-[2rem] md:text-[2.7rem] lg:text-[2.7rem] font-bold w-[90%] sm:w-[90%] md:w-[80%] lg:w-[75%] mx-auto tracking-wider leading-[3rem] sm:leading-[3rem] md:leading-[4rem]">We provide high quality and cost effective offshore web development services.</h1>
+        
+        <p class="text-gray-400 text-center text-lg w-[90%] sm:w-[90%] md:w-[80%] lg:w-[75%] mx-auto tracking-wider mt-10">
+          Lorem ipsum dolor sit amet, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+
+        <div class="w-full mt-10">
+          <img src="./images/banner_mid.jpg" class="mx-auto w-[90%] sm:w-[90%] md:w-[80%] lg:w-[75%]" alt="">
+        </div>
+      </section>
+    </section>
+
+    <!-- PROJECT SECTION-->
+    <section id="projects-section" class="mt-5 bg-gray-100 py-[100px] px-6 sm:px-8 md:px-20 lg:px-20">
+      <div class="container w-[100%] sm:w-[100%] md:w-[100%] lg:w-[75%] mx-auto">
+        <h1 class="text-center text-[2rem] sm:text-[2rem]  md:text-[2.8rem] font-extrabold">Projects</h1>
+
+        <ul class="nav-tabs grid grid-cols-2 sm:grid-cols-3 gap-2 md:grid-cols-5 lg:grid-cols-5 w-[100%] sm:w-[100%] md:w-[100%] lg:w-[70%] justify-evenly mx-auto mt-6">
+          <li class="nav-item">
+            <a href="#all" class="nav-link" >All</a>
+          </li>
+          <li class="nav-item">
+            <a href="#category1" class="nav-link" >Category 1</a>
+          </li>
+          <li class="nav-item">
+            <a href="#category2" class="nav-link" >Category 2</a>
+          </li>
+          <li class="nav-item">
+            <a href="#category3" class="nav-link" >Category 3</a>
+          </li>
+          <li class="nav-item">
+            <a href="#category4" class="nav-link" >Category 4</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content mt-[60px]">
+        <div class="tab-pane show" id="all">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div class="project-card">
+              <img src="./images/g1.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="./images/g2.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="./images/g3.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="./images/g4.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g5.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g6.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g7.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g8.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane" id="category1">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div class="project-card">
+              <img src="./images/g4.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g5.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g6.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g7.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g8.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane" id="category2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div class="project-card">
+              <img src="./images/g1.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="./images/g2.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="./images/g3.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="./images/g4.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane" id="category3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+
+            <div class="project-card">
+              <img src="./images/g5.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g6.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g7.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g8.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane" id="category4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div class="project-card">
+              <img src="./images/g1.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="./images/g2.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="./images/g5.jpg" class="w-full" alt="">
+              <div class="card-body">
+                <h5 class="font-bold">View Project</h5>
+                <p class="text-gray-400 text-sm">Add Some Description</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FOOTER SECTION-->
+    <section id="footer-section" class="w-full bg-gray-900 mt-10 md:mt-20 py-20 px-10">
+      <div class="w-[100%] sm:w-[100%] md:w-[90%] lg:w-[80%] mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-9">
+        <div>
+          <img src="./images/extra-services.png" class="w-[70%] invert" alt="">
+          <p class="text-gray-400 mt-2 sm:mt-2 md:mt-5 tracking-wider">
+            Lorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
+          </p>
+
+          <div class="social-icons flex space-x-2 sm:space-x-2 md:space-x-3">
+            <div class="social-icon facebook">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+
+            <div class="social-icon twitter">
+              <i class="fab fa-twitter"></i>
+            </div>
+
+            <div class="social-icon instagram">
+              <i class="fab fa-instagram"></i>
+            </div>
+
+            <div class="social-icon linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold tracking-wide text-lg sm:text-xl md:text-2xl lg:text-2xl">Latest Info</h4>
+
+          <ul class="footer-links list-disc list-inside mt-2 sm:mt-2 md:mt-5">
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Services</a>
+            </li>
+            <li>
+              <a href="">SignIn</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold tracking-wide text-lg sm:text-xl md:text-2xl lg:text-2xl">Our Projects</h4>
+
+          <ul class="footer-links list-disc list-inside mt-2 sm:mt-2 md:mt-5">
+            <li>
+              <a href="">Project 1</a>
+            </li>
+            <li>
+              <a href="">Project 2</a>
+            </li>
+            <li>
+              <a href="">Project 3</a>
+            </li>
+            <li>
+              <a href="">Project 4</a>
+            </li>
+            <li>
+              <a href="">Project 5</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold tracking-wide text-lg sm:text-xl md:text-2xl lg:text-2xl text-center sm:text-center md:text-left">Contact Information</h4>
+
+          <div class="footer-contact mt-5">
+            <div class="contact-info">
+              <span class="block px-4 py-1">
+                <svg class="stroke-white w-[20px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                
+              </span>
+              <div>
+                <h6 class="text-white font-bold mb-1 sm:mb-1 md:mb-3 text-sm sm:text-sm md:text-base">Phone Number</h6>
+                <span class="text-gray-600 tracking-wider font-light text-sm sm:text-sm md:text-base">+1 234 567 8901</span>
+              </div>
+            </div>
+
+            <div class="contact-info">
+              <span class="block px-4 py-1">
+                <svg class="stroke-white w-[20px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                
+                
+              </span>
+              <div>
+                <h6 class="text-white font-bold mb-1 sm:mb-1 md:mb-3 text-sm sm:text-sm md:text-base">Email Address</h6>
+                <span class="text-gray-600 tracking-wider font-light text-sm sm:text-sm md:text-base">mail@example.com</span>
+              </div>
+            </div>
+
+            <div class="contact-info">
+              <span class="block px-4 py-1">
+                <svg class="stroke-white w-[20px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                
+                
+              </span>
+              <div>
+                <h6 class="text-white font-bold mb-1 sm:mb-1 md:mb-3 text-sm sm:text-sm md:text-base">Location</h6>
+                <span class="text-gray-600 tracking-wider font-light text-sm sm:text-sm md:text-base">Broome St, NY 10002,California, USA.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
